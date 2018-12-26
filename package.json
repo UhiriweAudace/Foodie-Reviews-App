@@ -1,0 +1,18 @@
+{
+  "name": "first-restfull-api",
+  "version": "1.0.0",
+  "description": "my first restfull api",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Uhiriwe Audace",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.3",
+    "express": "^4.16.4",
+    "joi": "^14.3.0",
+    "lodash": "^4.17.11",
+    "mongoose": "^5.4.1"
+  }
+}
