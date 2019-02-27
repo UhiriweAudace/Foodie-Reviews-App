@@ -1,6 +1,6 @@
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const keys = require('../config/keys.dev');
+const keys = require('../config/keys');
 const passport = require('passport');
 const _ = require('lodash');
 const express = require('express');
