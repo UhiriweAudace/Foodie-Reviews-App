@@ -29,6 +29,8 @@ app.use(bodyParser.urlencoded({
     extended: false
 }));
 
+app.use(express.static(__dirname + './frontend/dist/the-hottest-reviews/'));
+
 // Load the routes
 const userRoutes = require('./routes/usersRoutes');
 app.use('/api/auth', userRoutes);
