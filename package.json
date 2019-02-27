@@ -10,6 +10,9 @@
     "client": "npm start --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
+   "engines": {
+     "node": "10.15.0"
+   },
   "author": "Uhiriwe Audace",
   "license": "ISC",
   "dependencies": {
