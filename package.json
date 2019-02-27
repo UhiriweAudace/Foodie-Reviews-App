@@ -8,11 +8,12 @@
     "start": "node server.js",
     "server": "nodemon server.js",
     "client": "npm start --prefix frontend",
+    "heroku-postbuild": "cd frontend/ && npm install",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
-   "engines": {
-     "node": "10.15.0"
-   },
+  "engines": {
+    "node": "10.15.0"
+  },
   "author": "Uhiriwe Audace",
   "license": "ISC",
   "dependencies": {
