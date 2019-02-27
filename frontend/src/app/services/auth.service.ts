@@ -13,11 +13,11 @@ export class AuthService {
   private userId: string;
 
   constructor(private http: HttpClient,
-              private router: Router) {}
+    private router: Router) { }
 
   createUser(email: string, password: string) {
     return new Promise((resolve, reject) => {
-      this.http.post('api/auth/signup', {email: email, password: password}).subscribe(
+      this.http.post('/api/auth/signup', { email: email, password: password }).subscribe(
         (response: { message: string }) => {
           resolve(response);
         },
@@ -38,8 +38,8 @@ export class AuthService {
 
   loginUser(email: string, password) {
     return new Promise((resolve, reject) => {
-      this.http.post('/api/auth/login', {email: email, password: password}).subscribe(
-        (response: {userId: string, token: string}) => {
+      this.http.post('//api/auth/login', { email: email, password: password }).subscribe(
+        (response: { userId: string, token: string }) => {
           this.userId = response.userId;
           this.authToken = response.token;
           this.isAuth$.next(true);
