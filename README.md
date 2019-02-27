@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Foodie Reviews App
 
 ## Hot Takes
@@ -56,6 +55,3 @@ sauce details are directly within the request body
     keeping track of their preferences and preventing them from liking or
      disliking the same sauce multiple times.
 * Total number of likes and dislikes to be updated with each like.
-=======
-# Foodie-Reviews-App
->>>>>>> 3e1d19a5f2844ea95a03e94ad7b16bb6f6a13e8d
