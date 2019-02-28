@@ -29,16 +29,19 @@ app.use(bodyParser.urlencoded({
     extended: false
 }));
 
-app.use(express.static(__dirname + './frontend/dist/the-hottest-reviews/'));
-
 // Load the routes
 const userRoutes = require('./routes/usersRoutes');
 app.use('/api/auth', userRoutes);
 const saucesRoutes = require('./routes/saucesRoutes');
 app.use('/api/sauces', saucesRoutes)
 
-app.use('/images', express.static(path.join(__dirname, 'images')))
+app.use('/images', express.static(path.join(__dirname, 'images')));
 
+const appPath = path.join(__dirname, 'frontend', 'dist', 'the-hottest-reviews');
+app.use(express.static(appPath));
+app.get('*', (req, res) => {
+    res.sendFile(path.resolve(appPath, 'index.html'))
+})
 
 
 const port = process.env.PORT || 3000;
