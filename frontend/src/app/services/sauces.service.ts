@@ -168,7 +168,7 @@ export class SaucesService {
   modifySauce(id: string, sauce: Sauce, image: string | File) {
     return new Promise((resolve, reject) => {
       if (typeof image === 'string') {
-        this.http.put('/api/sauces/' + id, sauce).subscribe(
+        this.http.put('api/sauces/' + id, sauce).subscribe(
           (response: { message: string }) => {
             resolve(response);
           },
@@ -194,7 +194,7 @@ export class SaucesService {
 
   deleteSauce(id: string) {
     return new Promise((resolve, reject) => {
-      this.http.delete('/api/sauces/' + id).subscribe(
+      this.http.delete('api/sauces/' + id).subscribe(
         (response: { message: string }) => {
           resolve(response);
         },
